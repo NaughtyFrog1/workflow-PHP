@@ -1,0 +1,30 @@
+//* BREAKPOINTS
+@mixin breakpoint-mobile {
+  @media (min-width: #{$mobile}) {
+    @content;
+  }
+}
+
+@mixin breakpoint-tablet {
+  @media (min-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin breakpoint-laptop {
+  @media (min-width: #{$laptop}) {
+    @content;
+  }
+}
+
+@mixin breakpoint-desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin breakpoint($min) {
+  @media (min-width: $min) {
+    @content;
+  }
+}
