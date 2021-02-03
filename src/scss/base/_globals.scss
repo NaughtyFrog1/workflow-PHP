@@ -10,8 +10,6 @@ html {
 }
 
 body {
-  overflow: hidden;
-  font-family: $fuente;
   font-size: 1.6rem;
 }
 
@@ -19,25 +17,8 @@ a {
   text-decoration: none;
 }
 
-h1,
-h2,
-h3 {
-  font-family: $fuente-titulos;
-  margin: 0 0 $separacion-small 0;
-}
-
-h3 {
-  font-size: 3rem;
-  letter-spacing: 0.1rem;
-  margin: $separacion 0 $separacion-xs;
-}
-
 img {
   max-width: 100%;
-}
-
-p {
-  color: $blanco;
 }
 
 ul {
