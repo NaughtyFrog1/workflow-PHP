@@ -1,0 +1,46 @@
+// Tamaño de Media Queries
+$mobile: 480px;
+$tablet: 768px;
+$laptop: 992px;
+$desktop: 1200px;
+
+:root {
+  //* TYPE SCALE
+
+  --text-base: 1.2rem;
+  --text-ratio: 0.4rem;
+  --text-ratio-lg: 0.6rem;
+  --line-height: 1.25;
+
+  --text-xs: calc(var(--text-base) - var(--text-ratio));
+  --text-sm: calc(var(--text-base));
+  --text-md: calc(var(--text-sm) + var(--text-ratio));
+  --text-lg: calc(var(--text-md) + var(--text-ratio));
+  --text-xl: calc(var(--text-lg) + var(--text-ratio));
+  --text-xxl: calc(var(--text-xl) + var(--text-ratio));
+  --text-xxxl: calc(var(--text-xxl) + var(--text-ratio));
+
+  @include breakpoint-laptop {
+    --text-ratio: var(--text-ratio-lg)
+  }
+
+
+  //* SPACING SCALE
+
+  --space-base:  1rem;
+  --space-xxxxs: calc(0.125 * var(--space-base)); 
+  --space-xxxs:  calc(0.25 * var(--space-base));
+  --space-xxs:   calc(0.375 * var(--space-base));
+  --space-xs:    calc(0.5 * var(--space-base));
+  --space-sm:    calc(0.75 * var(--space-base));
+  --space-md:    calc(1.25 * var(--space-base));
+  --space-lg:    calc(2 * var(--space-base));
+  --space-xl:    calc(3.25 * var(--space-base));
+  --space-xxl:   calc(5.25 * var(--space-base));
+  --space-xxxl:  calc(8.5 * var(--space-base));
+  --space-xxxxl: calc(13.75 * var(--space-base));
+
+  @include breakpoint-laptop {
+    --space-base: 1.25rem;
+  }
+}
