@@ -18,6 +18,7 @@ const terser = require('gulp-terser');
 // Tools
 const cache = require('gulp-cache');
 const clean = require('gulp-clean');
+const errorNotifier = require('gulp-error-notifier');
 const notify = require('gulp-notify');
 const rename = require('gulp-rename');
 const gulpif = require('gulp-if');
@@ -74,7 +75,7 @@ function imgminToWebp() {
 function buildSass() {
   return src(paths.scss.main)
     .pipe(gulpif(toDevelopment, sourcemaps.init()))
-    .pipe(sass())
+    .pipe(errorNotifier.handleError(sass()))
     .pipe(postcss([autoprefixer(), cssnano()]))
     .pipe(rename({suffix: '.min'}))
     .pipe(gulpif(toDevelopment, sourcemaps.write('.')))
@@ -88,7 +89,7 @@ function buildJS() {
   return src(paths.js.src)
     .pipe(gulpif(toDevelopment, sourcemaps.init()))
     .pipe(concat('bundle.js'))
-    .pipe(terser())
+    .pipe(errorNotifier.handleError(terser()))
     .pipe(rename({suffix: '.min'}))
     .pipe(gulpif(toDevelopment, sourcemaps.write('.')))
     .pipe(dest(paths.js.dest));
