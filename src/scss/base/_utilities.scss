@@ -38,3 +38,18 @@ $tas: left, center, right;
     text-align: $ta;
   }
 }
+
+//* GRID
+
+.grid-auto {
+  display: grid;
+  gap: var(--space-md);
+  grid-template-columns: 
+    repeat(auto-fit, minmax(var(--col-min-width), 1fr));
+
+  &.grid-auto--xs { --col-min-width: 12.8rem }
+  &.grid-auto--sm { --col-min-width: 16rem }
+  &.grid-auto--md { --col-min-width: 24rem }
+  &.grid-auto--lg { --col-min-width: 32rem }
+  &.grid-auto--xl { --col-min-width: 40rem }
+}
