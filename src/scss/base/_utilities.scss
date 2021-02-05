@@ -23,8 +23,6 @@
 .flex {
   display: flex;
 
-  $dirs: column, column-reverse, row, row-reverse; 
-
   @each $dir in column, column-reverse, row, row-reverse {
     &.flex-dir--#{$dir} {
       flex-direction: $dir;
@@ -35,9 +33,7 @@
 
 //* FONT-WEIGHT
 
-$fws: 100, 200, 300, 400, 500, 600, 700, 800, 900;
-
-@each $fw in $fws {
+@each $fw in 100, 200, 300, 400, 500, 600, 700, 800, 900 {
   .fw--#{$fw} {
     font-weight: $fw;
   }
@@ -68,9 +64,7 @@ $fws: 100, 200, 300, 400, 500, 600, 700, 800, 900;
 
 //* TEXT-ALIGN
 
-$tas: left, center, right;
-
-@each $ta in $tas {
+@each $ta in left, center, right {
   .ta--#{$ta} {
     text-align: $ta;
   }
