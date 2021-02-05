@@ -28,6 +28,12 @@
       flex-direction: $dir;
     }
   }
+
+  @each $value in wrap, nowrap, wrap-reverse {
+    &.flex-wrap--#{$value} {
+      flex-wrap: $value;
+    }
+  }
 }
 
 
