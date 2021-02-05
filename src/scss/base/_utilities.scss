@@ -66,6 +66,17 @@
 .gap--lg { gap: var(--space-lg); }
 .gap--xl { gap: var(--space-xl); }
 
+.gap-col--xs { gap: 0 var(--space-xs); }
+.gap-col--sm { gap: 0 var(--space-sm); }
+.gap-col--md { gap: 0 var(--space-md); }
+.gap-col--lg { gap: 0 var(--space-lg); }
+.gap-col--xl { gap: 0 var(--space-xl); }
+
+.gap-row--xs { gap: var(--space-xs) 0; }
+.gap-row--sm { gap: var(--space-sm) 0; }
+.gap-row--md { gap: var(--space-md) 0; }
+.gap-row--lg { gap: var(--space-lg) 0; }
+.gap-row--xl { gap: var(--space-xl) 0; }
 
 
 //* TEXT-ALIGN
