@@ -18,6 +18,21 @@
 }
 
 
+//* FLEX
+
+.flex {
+  display: flex;
+
+  $dirs: column, column-reverse, row, row-reverse; 
+
+  @each $dir in column, column-reverse, row, row-reverse {
+    &.flex-dir--#{$dir} {
+      flex-direction: $dir;
+    }
+  }
+}
+
+
 //* FONT-WEIGHT
 
 $fws: 100, 200, 300, 400, 500, 600, 700, 800, 900;
@@ -25,17 +40,6 @@ $fws: 100, 200, 300, 400, 500, 600, 700, 800, 900;
 @each $fw in $fws {
   .fw--#{$fw} {
     font-weight: $fw;
-  }
-}
-
-
-//* TEXT-ALIGN
-
-$tas: left, center, right;
-
-@each $ta in $tas {
-  .ta--#{$ta} {
-    text-align: $ta;
   }
 }
 
@@ -59,3 +63,15 @@ $tas: left, center, right;
 .gap--md { gap: var(--space-md); }
 .gap--lg { gap: var(--space-lg); }
 .gap--xl { gap: var(--space-xl); }
+
+
+
+//* TEXT-ALIGN
+
+$tas: left, center, right;
+
+@each $ta in $tas {
+  .ta--#{$ta} {
+    text-align: $ta;
+  }
+}
