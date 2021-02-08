@@ -91,8 +91,8 @@ function buildSass() {
 function buildJS() {
   return src(paths.js.src)
     .pipe(gulpif(toDevelopment, sourcemaps.init()))
-    .pipe(concat('bundle.js'))
     .pipe(errorNotifier.handleError(terser()))
+    .pipe(concat('bundle.js'))
     .pipe(rename({suffix: '.min'}))
     .pipe(gulpif(toDevelopment, sourcemaps.write('.')))
     .pipe(dest(paths.js.dest));
