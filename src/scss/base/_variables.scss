@@ -20,7 +20,7 @@ $desktop: 1200px;
   --text-xxl: calc(var(--text-xl) + var(--text-ratio));
   --text-xxxl: calc(var(--text-xxl) + var(--text-ratio));
 
-  @include breakpoint-laptop {
+  @include breakpoint-tablet {
     --text-ratio: var(--text-ratio-lg)
   }
 

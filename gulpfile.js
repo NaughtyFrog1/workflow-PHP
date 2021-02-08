@@ -42,6 +42,9 @@ const paths = {
     src: 'src/scss/**/*',
     dest: 'build/css',
     main: 'src/scss/main.scss'
+  },
+  web: {
+    src: '*.{html,php}'
   }
 }
 
@@ -127,6 +130,7 @@ function watchFiles() {
   watch(paths.img.src, series(imagemin, imgminToWebp, reload));
   watch(paths.js.src, series(buildJS, reload));
   watch(paths.scss.src, series(buildSass, reload));
+  watch(paths.web.src, reload);
 }
 
 
