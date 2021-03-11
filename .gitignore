@@ -6,3 +6,6 @@ build/
 *.css.map
 *.sass.map
 *.scss.map
+
+# SECURE
+includes/secure/
