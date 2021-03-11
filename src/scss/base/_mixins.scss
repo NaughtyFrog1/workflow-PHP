@@ -1,4 +1,5 @@
 //* BREAKPOINTS
+
 @mixin breakpoint-mobile {
   @media (min-width: #{$mobile}) {
     @content;
