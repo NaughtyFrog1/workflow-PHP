@@ -1,43 +1,64 @@
-// Tamaño de Media Queries
+//* BREAKPOINTS
+
 $mobile: 480px;
 $tablet: 768px;
 $laptop: 992px;
 $desktop: 1200px;
 
+
+//* FONTS
+
+$font: Arial, Helvetica, sans-serif;
+$font-header: 'Segoe UI', Tahoma, Verdana, sans-serif;
+
+
+//* COLORS
+$black:    hsl(0, 0%,  0%);
+$black-06: hsl(0, 0%,  6%);
+$black-12: hsl(0, 0%, 12%);
+$black-16: hsl(0, 0%, 18%);
+$black-23: hsl(0, 0%, 24%);
+
+$white:    hsl(0, 0%, 100%);
+$white-94: hsl(0, 0%,  94%);
+$white-88: hsl(0, 0%,  88%);
+$white-82: hsl(0, 0%,  82%);
+$white-76: hsl(0, 0%,  76%);
+
+$success: #198754;
+$danger:  #dc3545;
+$warning: #ffc107;
+$info:    #0dcaf0;
+
 :root {
   //* TYPE SCALE
 
-  --text-base: 1.2rem;
-  --text-ratio: 0.4rem;
-  --text-ratio-lg: 0.6rem;
-  --line-height: 1.25;
+  --text-base: 1.6rem;
+  --text-ratio: 0.6rem;
+  --line-height: 1.5;
 
-  --text-xs: calc(var(--text-base) - var(--text-ratio));
-  --text-sm: calc(var(--text-base));
-  --text-md: calc(var(--text-sm) + var(--text-ratio));
-  --text-lg: calc(var(--text-md) + var(--text-ratio));
-  --text-xl: calc(var(--text-lg) + var(--text-ratio));
-  --text-xxl: calc(var(--text-xl) + var(--text-ratio));
-  --text-xxxl: calc(var(--text-xxl) + var(--text-ratio));
-
-  @include breakpoint-tablet {
-    --text-ratio: var(--text-ratio-lg)
-  }
+  --text-xs: 1.2rem;
+  --text-sm: 1.4rem;
+  --text-md: 1.6rem;
+  --text-lg: 2.4rem;
+  --text-xl: 3.2rem;
+  --text-xxl: 3.6rem;
+  --text-xxxl: 4rem;
 
 
   //* SPACING SCALE
 
   --space-base:  1rem;
   --space-xxxxs: calc(0.125 * var(--space-base)); 
-  --space-xxxs:  calc(0.25 * var(--space-base));
+  --space-xxxs:  calc(0.25  * var(--space-base));
   --space-xxs:   calc(0.375 * var(--space-base));
-  --space-xs:    calc(0.5 * var(--space-base));
-  --space-sm:    calc(0.75 * var(--space-base));
-  --space-md:    calc(1.25 * var(--space-base));
-  --space-lg:    calc(2 * var(--space-base));
-  --space-xl:    calc(3.25 * var(--space-base));
-  --space-xxl:   calc(5.25 * var(--space-base));
-  --space-xxxl:  calc(8.5 * var(--space-base));
+  --space-xs:    calc(0.5   * var(--space-base));
+  --space-sm:    calc(0.75  * var(--space-base));
+  --space-md:    calc(1.25  * var(--space-base));
+  --space-lg:    calc(2     * var(--space-base));
+  --space-xl:    calc(3.25  * var(--space-base));
+  --space-xxl:   calc(5.25  * var(--space-base));
+  --space-xxxl:  calc(8.5   * var(--space-base));
   --space-xxxxl: calc(13.75 * var(--space-base));
 
   @include breakpoint-laptop {
