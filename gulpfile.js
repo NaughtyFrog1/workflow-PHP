@@ -44,7 +44,7 @@ const paths = {
     main: 'src/scss/main.scss'
   },
   web: {
-    src: '*.{html,php}'
+    src: '**/*.{html,php}'
   }
 }
 
