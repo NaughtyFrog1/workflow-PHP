@@ -8,6 +8,6 @@
     content=""
   >
   <title><?= $site_title ?></title>
-  <link rel="stylesheet" href="<?= ROOT_DIR ?>build/css/main.min.css">
+  <link rel="stylesheet" href="<?= DIR_ROOT ?>build/css/main.min.css">
 </head>
 <body <?= ($site_id ? "id='{$site_id}'" : '') ?> >

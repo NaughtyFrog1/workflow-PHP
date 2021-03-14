@@ -1,3 +1,3 @@
 <?php
 
-define('ROOT_DIR', '/workflow-PHP/');
+define('DIR_ROOT', '/workflow-PHP/');
